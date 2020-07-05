@@ -13,10 +13,10 @@ ORDER BY c.id;
 # LEFT/RIGHT JOIN
 SELECT DISTINCT(c.id), c.first_name FROM customers c 
 LEFT JOIN bookings b ON c.id = b.customer_id; 
-/* Left join returns only bookings owed by customers */
+/* Left join returns all customers and only bookings owed by customers */
 SELECT DISTINCT(c.id), c.first_name FROM customers c 
 RIGHT JOIN bookings b ON c.id = b.customer_id; 
-/* Right join returns only customers having bookings */
+/* Right join returns only customers having bookings and all bookings*/
 
 -- Aggregate queries & grouping --
 -- ---------------------------- --
