@@ -20,7 +20,8 @@ INSERT INTO customers (id,first_name,last_name,gender,email,address_id) VALUES
 (7,"Desiree","Kinney","F","et@scelerisqueneque.edu",7),
 (8,"Callie","Chavez","M","convallis.est@etmalesuada.co.uk",8),
 (9,"Daphne","Wolf","M","Lorem.ipsum@nuncinterdum.com",9),
-(10,"Ivan","Lott","M","sed.consequat.auctor@elit.co.uk",10);
+(10,"Ivan","Lott","M","sed.consequat.auctor@elit.co.uk",10),
+(11,"Hieu","Ngo","M","justacpulover@gmail.com",10);
 
 INSERT INTO films (id,name,length_min,description) VALUES 
 (1,"sagittis placerat. Cras",127,"dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat"),
