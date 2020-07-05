@@ -11,10 +11,10 @@ ORDER BY c.id;
 /* Return id and first name of customers who booked a seat in 'Turpis' auditorium */
 
 # LEFT/RIGHT JOIN
-SELECT DISTINCT(c.id), c.first_name FROM customers c 
+SELECT COUNT(DISTINCT(c.id)), COUNT(b.id) FROM customers c 
 LEFT JOIN bookings b ON c.id = b.customer_id; 
 /* Left join returns all customers and only bookings owed by customers */
-SELECT DISTINCT(c.id), c.first_name FROM customers c 
+SELECT COUNT(DISTINCT(c.id)), COUNT(b.id) FROM customers c 
 RIGHT JOIN bookings b ON c.id = b.customer_id; 
 /* Right join returns only customers having bookings and all bookings*/
 
