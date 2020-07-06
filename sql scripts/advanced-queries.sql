@@ -18,6 +18,12 @@ SELECT COUNT(DISTINCT(c.id)), COUNT(b.id) FROM customers c
 RIGHT JOIN bookings b ON c.id = b.customer_id; 
 /* Right join returns only customers having bookings and all bookings*/
 
+# CROSS JOIN
+SELECT f.name AS 'Film', a.name AS 'Auditorium'
+FROM films f
+CROSS JOIN auditoriums a;
+/* Return number of possible screenings for all the films (equals to film number x auditorium number) */
+
 -- Aggregate queries & grouping --
 -- ---------------------------- --
 # COUNT
