@@ -9,7 +9,7 @@ SET last_name = "changed"
 WHERE id = 12;
 SELECT * FROM cinema_booking_system.customers; #Check result
 DELETE from customers
-WHERE id = 12;
+WHERE email = "temp@gmail.com";
 SELECT * FROM cinema_booking_system.customers; #Check result
 
 # INSERT IGNORE
@@ -30,3 +30,9 @@ LIMIT 5;
 /* Return id and full name containing first name and last name of 
 last 5 customers who has letter 'i' in first name and last name is either Woodad/Perry/Lott/Ngo, 
 or customers who has id between 5 and 8 and own an email, from the highest to smallest id */
+
+# UNION
+SELECT f.name 'Films and auditoriums' FROM films f
+UNION
+SELECT a.name FROM auditoriums a;
+/* Return all the films and auditoriums of the cinema, remove duplications */

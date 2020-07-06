@@ -48,11 +48,11 @@ SELECT MAX(length_min), MIN(length_min) FROM films;
 SELECT AVG(length_min) FROM films;
 /* Return the average film lenghth in minutes */
 
-# GROUPING
-SELECT b.customer_id, COUNT(rs.id) FROM bookings b
+# GROUPING, ROLLUP
+SELECT b.customer_id, COUNT(rs.id) 'Number of resered seats' FROM bookings b
 JOIN reserved_seats rs ON b.id = rs.booking_id
-GROUP BY b.customer_id;
-/* Return number of reserved seats grouped by customer for each customer id */
+GROUP BY b.customer_id WITH ROLLUP;
+/* Return number of reserved seats grouped by customer for each customer id, with a total number at the end*/
 
 # HAVING
 SELECT f.name, f.length_min, COUNT(s.id) FROM films f
